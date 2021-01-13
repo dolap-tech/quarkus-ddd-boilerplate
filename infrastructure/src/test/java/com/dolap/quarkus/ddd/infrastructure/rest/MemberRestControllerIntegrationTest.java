@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @QuarkusTest
+@Transactional
 public class MemberRestControllerIntegrationTest {
 
     @Inject
@@ -41,7 +43,7 @@ public class MemberRestControllerIntegrationTest {
 
     @AfterEach
     public void afterEach() {
-        entityManager.createNativeQuery("truncate table member").executeUpdate();
+        entityManager.createNativeQuery("truncate table public.member").executeUpdate();
         persistedMembers.clear();
     }
 

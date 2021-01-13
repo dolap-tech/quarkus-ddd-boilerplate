@@ -10,7 +10,7 @@ quarkus:
     username: dolap
     password: 123456
     jdbc:
-      url: jdbc:postgresql://localhost:5409/quarkus-ddd
+      url: jdbc:postgresql://localhost:5406/quarkus-ddd
   hibernate-orm:
     database:
       generation: validate
