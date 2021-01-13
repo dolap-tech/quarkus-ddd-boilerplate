@@ -8,6 +8,8 @@ It has three sub-modules;
 * `application` -> controller interfaces, application messages and validators, converters etc.
 * `infrastructure` -> 3rd party dependencies, framework integrations, controller and repository implementations etc. 
  
+![DDD Module Diagram](assets/DDD-Diagram.png)
+ 
 It provides a CRUD sample which has the following operations; `list`, `create`, `update` and `delete`. 
 
 You can inspect the postman collection in the root folder!
