@@ -1,0 +1,47 @@
+allprojects {
+    apply plugin: "java"
+    apply plugin: "groovy"
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    ext {
+        groovyVersion = "3.0.6"
+        spockVersion = "2.0-M4-groovy-3.0"
+        javaxCDIVersion = "2.0"
+        apacheCommonsVersion = "3.11"
+    }
+
+    dependencies {
+        compile "org.codehaus.groovy:groovy-json:${groovyVersion}"
+        compile "javax.enterprise:cdi-api:${javaxCDIVersion}"
+        compile "org.apache.commons:commons-lang3:${apacheCommonsVersion}"
+
+
+        testCompile "org.spockframework:spock-core:${spockVersion}"
+        testCompile platform("org.spockframework:spock-bom:${spockVersion}")
+    }
+
+    group "com.dolap.quarkus.ddd"
+    version "1.0.0"
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    compileJava {
+        options.encoding = "UTF-8"
+        options.compilerArgs << "-parameters"
+    }
+
+    compileTestJava {
+        options.encoding = "UTF-8"
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}

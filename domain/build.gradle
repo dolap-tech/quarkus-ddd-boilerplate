@@ -1,0 +1,9 @@
+ext {
+    javaxPersistenceApiVersion = "1.0.2"
+    jakartaTransactionApiVersion = "1.3.3"
+}
+
+dependencies {
+    compile "javax.persistence:persistence-api:${javaxPersistenceApiVersion}"
+    compile "jakarta.transaction:jakarta.transaction-api:${jakartaTransactionApiVersion}"
+}
