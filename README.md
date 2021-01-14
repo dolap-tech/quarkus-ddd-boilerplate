@@ -1,5 +1,20 @@
 # Quarkus Domain Driven Design Boilerplate 
 A sample project following Domain Driven Design based on Quarkus Framework.
+
+## Table of Contents  
+* [Introduction](#introduction)  
+* [Prerequisites](#prerequisites)  
+* [Features](#features)  
+* [Highlights](#highlights)  
+    - [Groovy Spock Test Framework](#groovy-spock-test-framework)  
+    - [Panache](#panache)  
+    - [Flyway](#flyway)  
+* [Running the application in dev mode](#running-the-application-in-dev-mode)  
+* [Packaging and running the application](#packaging-and-running-the-application)  
+* [Creating a native executable](#creating-a-native-executable)  
+
+  
+## Introduction
  
 The project is structured with Gradle in a multi-module way to split up the code base into smaller modules that has their own dependencies. Hence, we keep the context of modules isolated in terms of dependencies.  
 
