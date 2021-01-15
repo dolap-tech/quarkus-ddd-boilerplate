@@ -74,6 +74,11 @@ You can check out the link below;
 
 ## Running the application in dev mode
 
+You can run `Postgres` in your local using our docker-compose.yml file in the root folder. See `env/local-database.env` file for an additional config.
+```shell script
+docker-compose up
+```
+
 You can run your application in dev mode that enables live coding using:
 ```shell script
 ./gradlew quarkusDev
